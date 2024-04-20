@@ -10,7 +10,13 @@
     color: #F77D00;
 }
 
-.lg{
-    background-color: rgb(132, 0, 197);
+header > .site-header__body{
+    background-color: rgb(132, 0, 197, 0.7);
+}
+.wysiwyg > h4:first-child {
+    text-align: center;
+}
 
+.logos-social-networks {
+    justify-content: center;
 }
