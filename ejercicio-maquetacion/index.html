@@ -6,6 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*RESET*/
+
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* Fin reset */
+
         * {
             box-sizing: border-box;
         }
@@ -15,82 +155,54 @@
             font-size: 20px;
             display: flex;
             text-align: center;
-
-        }
-
-        .red {
-            width: 100%;
-            background-color: red;
-
-
-        }
-
-        .green {
-            width: 100%;
-            background-color: green;
-        }
-
-        .blue {
-            width: 100%;
-            background-color: blue;
-
-        }
-
-        .red:hover,
-        .blue:hover {
-            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .green:hover {
-            box-shadow: 0 8px 12px 0 rgb(104, 104, 171, 0.8);
-        }
-
-        .Pro {
-            background-color: #6868AC;
-        }
-
-        h2 {
-            background-color: #111111;
-            color: white;
-            padding: 20px 20px 20px 20px;
-        }
-
-        h3 {
-            background-color: #eeeeee;
-            padding: 20px 20px 20px 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
         }
 
         ul {
-            float: left;
-            padding: 20px;
-            margin: 10px auto;
-            border: 1px solid black;
-            min-width: 200px;
+            width: 100%;
+            border: 1px solid #eeeeee;
+            flex: 1 1 270px;
+
+        }
+
+        ul:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        ul:nth-child(even):hover {
+            box-shadow: 0 8px 12px 0 rgb(104, 104, 171, 0.8);
+        }
+
+        ul>.lheader {
+            background-color: #111111;
+            font-size: 28px;
+            color: white;
+        }
+
+        ul:nth-child(even)>.lheader {
+            background-color: #6868AC;
         }
 
         li {
-            padding: 20px 20px 20px 20px;
-            background-color: yellow;
+            border-bottom: 1px solid #eeeeee;
+            padding: 25px 0px;
+            background-color: white;
             list-style: none;
             width: 100%
         }
 
         .lprice {
             font-size: 22px;
-            background-color: #ccc;
-        }
-        ul > .lheader {
-            background-color: #111111;
-            font-size: 28px;
-            color: white;
-        }
-
-        ul:nth-child(even) > .lheader {
-            background-color: #6868AC;
+            background-color: #eeeeee;
         }
 
         .lbottom {
-            background-color: grey;
+            background-color: #eeeeee;
+            border-bottom: none;
+            padding: 15px 0;
         }
 
         button {
@@ -99,7 +211,7 @@
             background-color: #6868AC;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 15px 20px;
             text-decoration: none;
         }
     </style>
@@ -112,7 +224,7 @@
                 Básico
             </li>
             <li class="lprice">
-                $ 9.99 / año
+                9.99 €/ año
             </li>
             <li>
                 10GB de Almacenamiento
@@ -135,7 +247,7 @@
                 Pro
             </li>
             <li class="lprice">
-                $ 24.99 / año
+                24.99 €/ año
             </li>
             <li>
                 25GB de Almacenamiento
@@ -158,7 +270,7 @@
                 Premium
             </li>
             <li class="lprice">
-                $ 49.99 / año
+                49.99 €/ año
             </li>
             <li>
                 50GB de Almacenamiento
