@@ -11,15 +11,17 @@
             font-weight: 700;
         }
 
+        
         .dice {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             object-fit: contain;
             border: 1px solid black;
             padding: 20px;
             width: 300px;
             height: 300px;
-            border-radius: 10%;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
         }
 
         .dice>div {
@@ -29,7 +31,27 @@
             background-color: black;
         }
 
-        .dice>div:nth-child(2) {
+        .proper-dice {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            object-fit: contain;
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            border-radius: 10%;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        }
+
+        .proper-dice>div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        .proper-dice>div:nth-child(2) {
             align-self: flex-end;
         }
 
@@ -75,6 +97,10 @@
             propiedaes CSS de forma
             adecuada al selector .dice para conseguirlo</p>
         <div class="dice">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="proper-dice">
             <div></div>
             <div></div>
         </div>
